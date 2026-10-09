@@ -6,3 +6,6 @@ class User(models.Model):
     email = models.EmailField(unique=True)
     mobile = models.CharField(max_length=15)
     password = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
